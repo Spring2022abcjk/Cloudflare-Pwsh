@@ -61,7 +61,7 @@ try {
     }
     $powerShellProject = [xml](Get-Content -Raw -LiteralPath (Join-Path $root 'src/Cloudflare.PowerShell/Cloudflare.PowerShell.csproj'))
     $sma = @($powerShellProject.Project.ItemGroup.PackageReference | Where-Object { [string]$_.Include -ceq 'System.Management.Automation' }) | Select-Object -First 1
-    Assert-P42Metadata ($null -ne $sma -and [string]$sma.Version -ceq '7.6.0') 'System.Management.Automation must remain pinned to 7.6.0.'
+    Assert-P42Metadata ($null -ne $sma -and [string]$sma.Version -ceq '7.6.6') 'System.Management.Automation must remain pinned to 7.6.6.'
 
     $pin = Get-P42Json (Join-Path $root 'build/pinned-schema.json') 'pinned schema manifest'
     Assert-P42Metadata ([int]$pin.version -eq 1) 'Pinned schema manifest version must be 1.'
