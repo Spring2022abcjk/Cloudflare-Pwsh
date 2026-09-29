@@ -118,6 +118,7 @@ admission remain later decisions.
 The follow-up CI trigger design for documentation-only changes is recorded in
 [CI Trigger Policy](./ci-trigger-policy.md). It is not yet implemented, so
 the current workflow still runs the complete graph for documentation commits.
+Its implementation is tracked separately in the [next-phase task register](./next-phase-task-register.md).
 
 #### P3.4 integration closure
 
@@ -241,6 +242,40 @@ tracking, deprecated-operation handling, and release automation. P5 maintains
 the system after the first release decision; it does not expand the first
 release candidate's public surface by implication.
 
+## Proposed P6 — SDK Scale Architecture and Coverage
+
+Status: **proposal; no implementation or public admission approved**. The first
+release candidate remains the five-cmdlet baseline. Design can proceed in
+parallel with release metadata closure, but it cannot substitute for P4.3
+acceptance. P6 should favor complete, commonly used workflows over an operation
+count target and retain the explicit admission policy.
+
+1. **P6.1 Architecture design:** define the eventual meta module, shared
+   Accounts/Core boundaries, service module classification, shared-type and
+   dependency/version rules, and a deterministic Module Planner. Record the
+   effect on existing command identities and package provenance before moving
+   code or publishing a new module.
+2. **P6.2 Authentication and context:** design explicit account and optional
+   zone selection, credential lifetime and persistence, context precedence,
+   overrides, and fail-closed scope resolution. A context must not guess a
+   zone or silently broaden a mutation's scope.
+3. **P6.3 Discovery and raw API:** design command/operation/permission
+   discovery and a shared-runtime raw request path. Specify how non-admitted
+   operations are described without presenting them as supported cmdlets.
+4. **P6.4 Admission tooling:** make service classification, naming/collision
+   review, help, compatibility, coverage, mock tests, and export parity
+   reproducible. Technical readiness alone must not change public exports.
+5. **P6.5 Bounded workflow pilots:** select a small service/workflow only after
+   its permissions, transport, mutation safety, and acceptance evidence are
+   defined. Expand in reviewed waves rather than by endpoint count.
+6. **P6.6 Distribution:** evaluate individual service packages and an
+   aggregate package after module boundaries have passed a pilot; verify
+   installation, upgrade, dependency alignment, and provenance.
+
+P6.1 is the next design decision, not a reason to immediately split the
+five-command module or admit D1/D2. See the [task register](./next-phase-task-register.md)
+for dependencies and separately tracked issues.
+
 ## Deferred items
 
 ### Reference checkout/cache maintenance
@@ -254,12 +289,14 @@ schema-update validation, report `sourcePath` identity, candidate provenance,
 and the historical ABC evidence directory. It must not introduce one shared
 writable reference directory. See [reference checkout/cache maintenance](./ref-checkout-cache-maintenance.md).
 
-The following remain open until their dedicated evidence closes them:
-real-account acceptance, device/manual UX, remote GitHub Actions execution,
-Gallery publishing, legacy authentication, automatic idempotency, complete
-mutation retry policy, full binary PowerShell UX, and HTTP `2xx` with
-`success=false` semantics. Broader explicit public admission is intentionally
-not bound to first-release readiness; the first release candidate remains
-based on the current five formal public cmdlets.
+Historical open items must be read against their dedicated evidence: P3.5a,
+P3.5b, and P3.5c have bounded conclusions, P4.1 has candidate/manual UX
+acceptance, and remote GitHub Actions has run for later source commits. These
+do not establish P4.3 acceptance or Gallery publication. Legacy
+authentication, automatic idempotency, complete mutation retry policy, full
+binary PowerShell UX, and HTTP `2xx` with `success=false` semantics remain
+separate unresolved capabilities. Broader explicit public admission is not
+bound to first-release readiness; the first release candidate remains based
+on the current five formal public cmdlets.
 
 The formal support baseline remains PowerShell 7.6+ and .NET 10 on the Windows-first host. See [ADR 0001](./adr/0001-net10-powershell76-baseline.md).
