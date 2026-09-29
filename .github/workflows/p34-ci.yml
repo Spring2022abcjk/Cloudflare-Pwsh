@@ -19,8 +19,28 @@ defaults:
     shell: pwsh
 
 jobs:
+  changes:
+    name: Classify changes
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      docs_only: ${{ steps.classify.outputs.docs_only }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Classify event diff
+        id: classify
+        env:
+          BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+        run: ./tools/Get-CiChangeClassification.ps1 -RepositoryRoot . -EventName $env:GITHUB_EVENT_NAME -BaseSha $env:BASE_SHA -HeadSha $env:HEAD_SHA -OutputPath $env:GITHUB_OUTPUT
+
   build:
     name: Build
+    needs: changes
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 30
     steps:
@@ -37,7 +57,8 @@ jobs:
 
   deterministic-generation:
     name: Deterministic generation
-    needs: build
+    needs: [changes, build]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 45
     steps:
@@ -51,7 +72,8 @@ jobs:
 
   unit-runtime:
     name: Unit and runtime smoke
-    needs: build
+    needs: [changes, build]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 45
     steps:
@@ -71,7 +93,8 @@ jobs:
 
   regression:
     name: P1-P2.4 regression
-    needs: build
+    needs: [changes, build]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 45
     steps:
@@ -85,7 +108,8 @@ jobs:
 
   compatibility:
     name: Compatibility gate
-    needs: regression
+    needs: [changes, regression]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 45
     steps:
@@ -120,7 +144,8 @@ jobs:
 
   coverage:
     name: Coverage gate
-    needs: build
+    needs: [changes, build]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 60
     steps:
@@ -158,7 +183,8 @@ jobs:
 
   release-preflight:
     name: Release and security preflight
-    needs: build
+    needs: [changes, build]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 20
     steps:
@@ -174,7 +200,8 @@ jobs:
 
   package:
     name: Package candidate and smoke
-    needs: [deterministic-generation, unit-runtime, regression, compatibility, coverage, release-preflight]
+    needs: [changes, deterministic-generation, unit-runtime, regression, compatibility, coverage, release-preflight]
+    if: ${{ needs.changes.result == 'success' && needs.changes.outputs.docs_only != 'true' }}
     runs-on: windows-2025
     timeout-minutes: 60
     steps:
@@ -211,3 +238,18 @@ jobs:
           path: ./artifacts/p34-candidate
           if-no-files-found: error
           retention-days: 14
+
+  ci-status:
+    name: CI status
+    if: ${{ always() }}
+    needs: [changes, build, deterministic-generation, unit-runtime, regression, compatibility, coverage, release-preflight, package]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Evaluate required CI status
+        env:
+          NEEDS_JSON: ${{ toJSON(needs) }}
+        run: ./tools/Test-CiStatus.ps1 -NeedsJson $env:NEEDS_JSON
