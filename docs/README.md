@@ -11,7 +11,9 @@
 - [P1.1.5 总结](./P1.1.5-summary.md)：通用 correction/projection、强类型 presence/union 与生成边界。
 - [P1.2 总结](./P1.2-summary.md)：OpenAPI loader/ref resolver/normalizer、correction 和 DNS semantic diff。
 - [架构](./architecture.md)：长期 pipeline、层边界、已确认架构事实和 deferred boundary。
-- [路线图](./roadmap.md)：P1 完成项与 P2.1–P4 路线。
+- [路线图](./roadmap.md)：当前阶段状态、P5 维护方向与拟议的 P6 SDK 规模化设计。
+- [后续任务清单](./next-phase-task-register.md)：首个候选、CI、ref、P6 和保留问题的优先级与证据边界。
+- [CI trigger policy](./ci-trigger-policy.md)：仅文档变更的 CI 优化设计；工作流尚未实施。
 - [Reference checkout/cache maintenance](./ref-checkout-cache-maintenance.md)：后续集中缓存、独立 checkout 和清理验收方案；当前不实施。
 - [开发原则](./development-principles.md)：后续 agent 必须遵守的长期规则。
 - [P2.1 总结](./P2.1-summary.md)：Zones、D1、AI Search 跨资源归一化、投影快照和回归结果。
