@@ -60,7 +60,7 @@ decisions.
 
 ### P3.1 — Production Runtime
 
-Status: completed in this workspace; see [P3.1 summary](./P3.1-summary.md) and [P3.1 progress](./P3.1-progress.md).
+Status: completed in this workspace; see [P3.1 summary](./P3.1-summary.md). The final progress log is [archived](./archive/2026-10-03/P3.1-progress.md).
 
 Implement and validate a transport-independent runtime abstraction covering request/response representations, serializers, parsers, content lifetimes, generic operation dispatch from generated metadata, raw text, binary, multipart, streaming, shared pagination, replayability-aware retry, separately modeled idempotency, authentication context, cancellation, and stable error mapping.
 
@@ -68,8 +68,7 @@ The first delivery slices are runtime abstraction, generic dispatch, raw text, b
 
 ### P3.2 — Generated Public Surface
 
-Status: completed in this workspace; see [P3.2 progress](./P3.2-progress.md)
-and [P3.2 summary](./P3.2-summary.md).
+Status: completed in this workspace; see [P3.2 summary](./P3.2-summary.md).
 
 The validated representative surface is `Get-CfZone`, `Get-CfDnsRecord`,
 `New-CfDnsRecord`, `Remove-CfDnsRecord`, and `Set-CfDnsRecord` (PUT/PATCH).
@@ -83,7 +82,6 @@ migration remains deferred.
 ### P3.3 — API Coverage Expansion
 
 Status: completed in this workspace for the bounded discovery/D1/D2 scope; see
-[P3.3 plan](./P3.3-plan.md), [P3.3 progress](./P3.3-progress.md), and
 [P3.3 summary](./P3.3-summary.md). The six-operation `d1/database` and
 `healthchecks` extensions passed their slice gates. Global public admission is
 unchanged: every scanned operation remains classified, and the six D2
@@ -103,7 +101,7 @@ identity.
 
 ### P3.4 — Packaging, CI, and Update Workflow
 
-Status: completed in this workspace for the non-publishing release-engineering foundation; see [P3.4 plan](./P3.4-ci-packaging-plan.md) and [P3.4 summary](./P3.4-ci-packaging-summary.md).
+Status: completed in this workspace for the non-publishing release-engineering foundation; see [P3.4 summary](./P3.4-ci-packaging-summary.md) and the current [CI engineering guide](./ci-engineering.md).
 
 The Windows-first CI workflow now separates build, deterministic generation,
 unit/runtime, P1–P2.4 regression, compatibility, coverage, package assembly,
@@ -115,10 +113,10 @@ through a manual workflow-dispatch entry in an isolated temporary checkout.
 PowerShell Gallery publication, real-account validation, and broader public
 admission remain later decisions.
 
-The follow-up CI trigger design for documentation-only changes is recorded in
-[CI Trigger Policy](./ci-trigger-policy.md). It is not yet implemented, so
-the current workflow still runs the complete graph for documentation commits.
-Its implementation is tracked separately in the [next-phase task register](./next-phase-task-register.md).
+CI-01 documentation-only routing was merged through PR #8. The classifier and
+stable `CI status` check are implemented; the new-branch baseline refinement
+and the remote acceptance matrix remain open. See the [CI trigger policy](./ci-trigger-policy.md),
+[CI engineering guide](./ci-engineering.md), and [next-phase task register](./next-phase-task-register.md).
 
 #### P3.4 integration closure
 
@@ -188,8 +186,8 @@ precondition for this first release candidate.
 
 ### P4.1 — Manual PowerShell UX & Help
 
-Status: **Complete**. See [P4.1 progress](./P4.1-progress.md) and [P4.1
-manual acceptance](./P4.1-manual-acceptance.md). The evidence is candidate,
+Status: **Complete**. See [P4.1 manual acceptance](./P4.1-manual-acceptance.md).
+The final progress log is [archived](./archive/2026-10-03/P4.1-progress.md). The evidence is candidate,
 mock/local, and manual UX evidence; it is not real-account or release evidence.
 
 Review the five formal public cmdlets — `Get-CfZone`, `Get-CfDnsRecord`,

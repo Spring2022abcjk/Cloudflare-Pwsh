@@ -158,7 +158,7 @@ stage results. An operation is not `Supported` until public eligibility and the
 same request/output/error/safety evidence used by P3.2 are present. Operations
 that are not admitted to the current bounded public policy remain explicitly
 classified rather than silently omitted. The discovery baseline and schema are
-defined in [P3.3 plan](./P3.3-plan.md) and emitted by
+defined in the [archived P3.3 plan](./archive/2026-10-03/P3.3-plan.md) and emitted by
 `tools/Invoke-P33CoverageDiscovery.ps1`.
 
 The D1 `d1/database` bounded slice is complete. D2 `healthchecks` adds six
