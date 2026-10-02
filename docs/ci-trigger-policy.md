@@ -2,8 +2,9 @@
 
 ## Status
 
-**CI-01 merged to `main` through PR #8; remote acceptance pending.** The
-new-branch baseline refinement is local to `codex-petal/ci-new-branch-diff`.
+**CI-01 merged to `main` through PR #8; remote acceptance pending.** This
+branch proposes the new-branch baseline refinement; its remote result is not
+yet part of the accepted evidence.
 `.github/workflows/p34-ci.yml` starts on every `push`,
 `pull_request`, and manual dispatch. The `changes` job runs the PowerShell
 classifier before the eight heavy jobs. The always-created `CI status` job
@@ -69,7 +70,7 @@ classification and stable status contract.
 
 ## Required workflow shape
 
-The implementation should preserve the existing job graph and add the
+The implementation preserves the existing job graph and adds the
 classification dependency explicitly:
 
 ```yaml
@@ -107,8 +108,8 @@ is not part of this routing change.
 
 ## Evidence and acceptance gates
 
-Before enabling the policy, verify all of the following in a pull request and
-on a branch push:
+To complete acceptance for this workflow revision, verify all of the following
+in a pull request and on a branch push:
 
 1. A change under `docs/**` creates `CI status`, runs no heavy Windows job, and
    is mergeable when the stable check passes.
