@@ -4,6 +4,8 @@ param(
     [Parameter(Mandatory)][string]$EventName,
     [string]$BaseSha,
     [string]$HeadSha,
+    [string]$DefaultBranchRef,
+    [ValidateSet('true', 'false')][string]$PushCreated = 'false',
     [string]$OutputPath
 )
 
@@ -59,19 +61,38 @@ if ($EventName -ceq 'workflow_dispatch') {
     $docsOnly = $false
 } else {
     if ($EventName -cnotin @('push', 'pull_request')) { throw "Unsupported CI event '$EventName'." }
-    foreach ($sha in @($BaseSha, $HeadSha)) {
-        if ($sha -cnotmatch '^[0-9a-f]{40}$' -or $sha -ceq ('0' * 40)) { throw 'Unable to resolve CI diff: missing or invalid commit SHA.' }
-        [void](Invoke-GitText @('cat-file', '-e', "$sha^{commit}"))
+    if ($HeadSha -cnotmatch '^[0-9a-f]{40}$' -or $HeadSha -ceq ('0' * 40)) {
+        throw 'Unable to resolve CI diff: missing or invalid commit SHA.'
+    }
+    [void](Invoke-GitText @('cat-file', '-e', "$HeadSha^{commit}"))
+    $diffBase = $BaseSha
+    if ($EventName -ceq 'push' -and $BaseSha -ceq ('0' * 40)) {
+        if ($PushCreated -ne 'true' -or [string]::IsNullOrWhiteSpace($DefaultBranchRef)) {
+            throw 'Unable to resolve CI diff: zero before SHA without a new-branch baseline.'
+        }
+        $defaultTip = Invoke-GitText @('show-ref', '--verify', '--hash', $DefaultBranchRef)
+        if ($defaultTip -cnotmatch '^[0-9a-f]{40}$') { throw 'Unable to resolve CI diff: invalid default-branch commit.' }
+        $mergeBases = @((Invoke-GitText @('merge-base', '--all', $defaultTip, $HeadSha)).Split("`n") | Where-Object { $_ })
+        if ($mergeBases.Count -ne 1 -or $mergeBases[0] -cnotmatch '^[0-9a-f]{40}$') {
+            throw 'Unable to resolve CI diff: no unique default-branch merge base.'
+        }
+        $diffBase = $mergeBases[0]
+    } else {
+        if ($EventName -ceq 'push' -and $PushCreated -eq 'true') { throw 'Unable to resolve CI diff: new-branch event has a nonzero before SHA.' }
+        if ($BaseSha -cnotmatch '^[0-9a-f]{40}$' -or $BaseSha -ceq ('0' * 40)) {
+            throw 'Unable to resolve CI diff: missing or invalid commit SHA.'
+        }
+        [void](Invoke-GitText @('cat-file', '-e', "$BaseSha^{commit}"))
     }
     if ($EventName -ceq 'pull_request') {
         $parents = (Invoke-GitText @('rev-list', '--parents', '-n', '1', $HeadSha)).Split(' ')
         if ($parents.Count -lt 3 -or $parents[1] -cne $BaseSha) {
             throw 'Unable to resolve CI diff: pull request checkout is not the expected merge commit.'
         }
-    } else {
+    } elseif ($BaseSha -cne ('0' * 40)) {
         [void](Invoke-GitText @('merge-base', '--is-ancestor', $BaseSha, $HeadSha))
     }
-    $paths = @(Get-GitChangedPaths -Base $BaseSha -Head $HeadSha)
+    $paths = @(Get-GitChangedPaths -Base $diffBase -Head $HeadSha)
     $docsOnly = @($paths | Where-Object { -not (Test-ApprovedDocumentationPath $_) }).Count -eq 0
 }
 

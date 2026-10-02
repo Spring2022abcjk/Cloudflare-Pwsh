@@ -26,10 +26,10 @@ function Add-Commit {
     return Invoke-GitChecked @('rev-parse', 'HEAD')
 }
 function Assert-Classification {
-    param([string]$Label, [string]$EventName, [string]$BaseSha, [string]$HeadSha, [bool]$DocsOnly, [bool]$ShouldFail = $false)
+    param([string]$Label, [string]$EventName, [string]$BaseSha, [string]$HeadSha, [bool]$DocsOnly, [bool]$ShouldFail = $false, [string]$DefaultBranchRef = '', [string]$PushCreated = 'false')
     $outputFile = Join-Path $temporary '.git/classification-output.txt'
     [IO.File]::WriteAllText($outputFile, '', [Text.UTF8Encoding]::new($false))
-    $arguments = @('-RepositoryRoot', $temporary, '-EventName', $EventName, '-BaseSha', $BaseSha, '-HeadSha', $HeadSha, '-OutputPath', $outputFile)
+    $arguments = @('-RepositoryRoot', $temporary, '-EventName', $EventName, '-BaseSha', $BaseSha, '-HeadSha', $HeadSha, '-DefaultBranchRef', $DefaultBranchRef, '-PushCreated', $PushCreated, '-OutputPath', $outputFile)
     $output = @(& pwsh -NoLogo -NoProfile -File $classifier @arguments 2>&1)
     if ($ShouldFail) {
         if ($LASTEXITCODE -eq 0) { throw "$Label unexpectedly succeeded." }
@@ -85,7 +85,7 @@ try {
     Assert-Classification 'manual dispatch forces CI' workflow_dispatch '' '' $false
     Assert-Classification 'pull request merge diff' pull_request $renameBase $renameHead $false $true
     Assert-Classification 'missing diff commit' push ('f' * 40) $renameHead $false $true
-    Assert-Classification 'zero before SHA' push ('0' * 40) $renameHead $false $true
+    Assert-Classification 'zero before without branch creation' push ('0' * 40) $renameHead $false $true
     Assert-Classification 'reversed push diff' push $renameHead $renameBase $false $true
     Assert-Classification 'empty diff' push $renameHead $renameHead $false $true
     Invoke-GitChecked @('switch', '-c', 'ci-feature') | Out-Null
@@ -101,6 +101,29 @@ try {
     Invoke-GitChecked @('merge', '--no-ff', '-m', 'mixed merge fixture', $mixedFeatureHead) | Out-Null
     $mixedMerge = Invoke-GitChecked @('rev-parse', 'HEAD')
     Assert-Classification 'pull request mixed merge diff' pull_request $prMerge $mixedMerge $false
+    $firstPushBase = $mixedMerge
+    $firstPushRef = 'refs/remotes/origin/main'
+    Invoke-GitChecked @('update-ref', $firstPushRef, $firstPushBase) | Out-Null
+    Invoke-GitChecked @('switch', '-c', 'ci-first-doc', $firstPushBase) | Out-Null
+    $firstDocs = Add-Commit @{ 'docs/first-push.md' = 'docs' }
+    Assert-Classification 'new branch first push docs only' push ('0' * 40) $firstDocs $true $false $firstPushRef true
+    Assert-Classification 'new branch boolean casing' push ('0' * 40) $firstDocs $true $false $firstPushRef True
+    Assert-Classification 'new branch missing default ref' push ('0' * 40) $firstDocs $false $true 'refs/heads/missing' true
+    Assert-Classification 'new branch empty baseline diff' push ('0' * 40) $firstPushBase $false $true $firstPushRef true
+    Assert-Classification 'creation signal with nonzero before' push $firstPushBase $firstDocs $false $true $firstPushRef true
+    Invoke-GitChecked @('switch', '-c', 'ci-first-root', $firstPushBase) | Out-Null
+    $firstRoot = Add-Commit @{ 'README.md' = 'third' }
+    Assert-Classification 'new branch first push root Markdown' push ('0' * 40) $firstRoot $true $false $firstPushRef true
+    Invoke-GitChecked @('switch', '-c', 'ci-first-mixed', $firstPushBase) | Out-Null
+    $firstMixed = Add-Commit @{ 'docs/first-mixed.md' = 'docs'; 'src/first-mixed.cs' = 'code' }
+    Assert-Classification 'new branch first push mixed' push ('0' * 40) $firstMixed $false $false $firstPushRef true
+    Invoke-GitChecked @('switch', '-c', 'ci-first-workflow', $firstPushBase) | Out-Null
+    $firstWorkflow = Add-Commit @{ '.github/workflows/new.yml' = 'workflow' }
+    Assert-Classification 'new branch first push workflow' push ('0' * 40) $firstWorkflow $false $false $firstPushRef true
+    Invoke-GitChecked @('switch', '-c', 'ci-first-history', $firstPushBase) | Out-Null
+    $null = Add-Commit @{ 'src/earlier.cs' = 'code' }
+    $firstHistory = Add-Commit @{ 'docs/latest.md' = 'docs' }
+    Assert-Classification 'new branch includes earlier code commit' push ('0' * 40) $firstHistory $false $false $firstPushRef true
     Assert-Status 'intentional docs skip' success true skipped $true
     Assert-Status 'complete heavy CI' success false success $true
     Assert-Status 'classifier failure' failure '' skipped $false
