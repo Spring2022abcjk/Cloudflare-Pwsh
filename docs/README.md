@@ -13,35 +13,32 @@
 - [架构](./architecture.md)：长期 pipeline、层边界、已确认架构事实和 deferred boundary。
 - [路线图](./roadmap.md)：当前阶段状态、P5 维护方向与拟议的 P6 SDK 规模化设计。
 - [后续任务清单](./next-phase-task-register.md)：首个候选、CI、ref、P6 和保留问题的优先级与证据边界。
-- [CI trigger policy](./ci-trigger-policy.md)：仅文档变更的 CI 优化设计；工作流尚未实施。
+- [CI engineering](./ci-engineering.md)：当前 CI 工作流、变更分类、稳定状态检查及远端证据缺口。
+- [CI trigger policy](./ci-trigger-policy.md)：仅文档变更的 CI 验收契约；远端矩阵和必需检查设置尚待完成。
 - [Reference checkout/cache maintenance](./ref-checkout-cache-maintenance.md)：后续集中缓存、独立 checkout 和清理验收方案；当前不实施。
 - [开发原则](./development-principles.md)：后续 agent 必须遵守的长期规则。
 - [P2.1 总结](./P2.1-summary.md)：Zones、D1、AI Search 跨资源归一化、投影快照和回归结果。
 - [P2.2 总结](./P2.2-summary.md)：multipart、text、binary transport 的归一化结论和 runtime 边界。
 - [P2.3 总结](./P2.3-summary.md)：PowerShell projection 扩展、`Get-CfZone` 二进制 cmdlet 隔离实验和迁移边界。
 - [P2.4 总结](./P2.4-summary.md)：规范化模型兼容性引擎、投影差异、真实 schema revision 报告和 net10 基线。
-- [P3 计划](./P3-plan.md)：runtime-first 的 productionization 计划、P3.1 分片和验收门。
-- [P3.1 进度](./P3.1-progress.md)：当前 runtime 已实现、已验证、仍延期和下一步。
-- [P3.2 进度](./P3.2-progress.md)：generated public PowerShell surface 的范围、证据、验收门和下一步。
-- [P3.2 前两个 P1 修复计划](./P3.2-plan.md)：公共路由、canonical projection、生成器漂移检查和证据边界。
+- [P3.1 总结](./P3.1-summary.md)：runtime 实现、验收与延期边界。
+- [P3.2 总结](./P3.2-summary.md)：正式五个生成 cmdlet 的实现与验收边界。
 - [P3.2 独立评审提示词](./P3.2-independent-review-prompt.md)：新智能体会话使用的只读评审提示词。
 - `tools/Invoke-P32ReadOnlyTests.ps1`：在隔离临时副本中执行 P3.2 独立只读验收，不写当前工作树。
-- [P3.3 计划](./P3.3-plan.md)：覆盖发现和 D1/D2 有界扩展的依赖、验收门与停止条件。
-- [P3.3 进度](./P3.3-progress.md)：D1/D2 实现、修复、验证和证据边界。
 - [P3.3 总结](./P3.3-summary.md)：P3.3 有界阶段的最终结论和未解决边界。
+- [P3.3 projection-reduction 总结](./P3.3-projection-reduction-summary.md)：冲突缩减与显式准入证据。
 - `tools/Invoke-P33D2ReadOnlyTests.ps1`：在隔离临时副本中执行 P3.3 D1/D2 只读验收。
-- [P3.4 CI/package 计划](./P3.4-ci-packaging-plan.md)：Windows-first CI、候选包和 schema-update gate。
 - [P3.4 CI/package 总结](./P3.4-ci-packaging-summary.md)：合并后的 CI、provenance 和发布边界。
 - [P3.5a 只读 live validation](./P3.5a-live-validation.md)：12 次低频 GET、0 次变更的限定范围真实账户证据。
 - [P3.5b constrained CRUD 任务文档](./P3.5b-constrained-crud-validation.md)：批准范围内的单记录真实 CRUD、精确清理及独立的本地故障路径验证已完成。
 - [P3.5c transport evidence](./P3.5c-transport-evidence-plan.md)：限定证据范围 Complete；记录六次 GET、两次 export 对照、mock/local 验收及已知限制。
-- [P4.1 progress](./P4.1-progress.md)：五个正式 cmdlet 的 pipeline identity、help 和 candidate 状态。
 - [P4.1 manual acceptance](./P4.1-manual-acceptance.md)：P4.1 最终 acceptance 证据。
 - [P4.2 ABC integration summary](./P4.2-abc-integration-summary.md)：技术集成和 exact-HEAD 证据边界。
 - [P4.2 安全审查](./P4.2-security-review.md)：Actions、secret、supply-chain 和 artifact boundary 评审。
 - [P4.2 release policy](./P4.2-release-policy.md)：版本、tag、release notes、Gallery 和 signing policy。
 - [P4.2 release checklist](./P4.2-release-checklist.md)：最终 RC 所需的跨阶段证据清单。
 - [归档文档](./archive/2026-09-23/README.md)：已被当前证据取代的 Phase 0、旧计划和旧状态文档；不代表当前完成状态。
+- [已完成任务的计划/进度归档](./archive/2026-10-03/README.md)：被阶段总结及验收记录取代的 P3/P4 实施记录。
 - [Support matrix](./support-matrix.md)：当前 Windows-first / PowerShell 7.6+ / .NET 10 支持声明。
 - [ADR 0001](./adr/0001-net10-powershell76-baseline.md)：PowerShell 7.6/.NET 10 统一基线决策。
 

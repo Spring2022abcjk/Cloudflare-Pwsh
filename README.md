@@ -24,12 +24,11 @@ P2.4 compatibility work is under `src/Cloudflare.Normalization/Compatibility` an
 
 - [Roadmap](./docs/roadmap.md): P1/P2 evidence and the P3–P5 production path.
 - [Architecture](./docs/architecture.md): normalized API, corrections, PowerShell projection, generation, and shared runtime boundaries.
-- [P3 plan](./docs/P3-plan.md): the current runtime-first implementation slices and acceptance criteria.
-- [P3.3 plan](./docs/P3.3-plan.md): deterministic coverage discovery and the bounded D1 extension slice.
-- [P3.3 projection-reduction plan](./docs/P3.3-projection-reduction-plan.md): blocker taxonomy, generic projection disambiguation, and public admission gates.
+- [P3.1 summary](./docs/P3.1-summary.md): completed runtime scope and acceptance evidence.
+- [P3.3 summary](./docs/P3.3-summary.md): completed coverage discovery and bounded D1/D2 evidence.
 - [P3.3 projection-reduction summary](./docs/P3.3-projection-reduction-summary.md): admission/export parity repair and final PowerShell identity guard.
 - [P3.3 public admission policy](./docs/P3.3-public-admission-policy.md): explicit gates separating technical readiness from public cmdlet admission.
-- [P3.4 CI/package plan](./docs/P3.4-ci-packaging-plan.md): Windows-first validation, candidate packaging, and schema-update gates.
+- [CI engineering](./docs/ci-engineering.md): current workflow graph, change routing, status contract, and evidence gaps.
 - [P3.4 integration summary](./docs/P3.4-integration-summary.md): merged P3.3/P3.4 evidence, package provenance, and release boundaries.
 - [P4.2 integration summary](./docs/P4.2-abc-integration-summary.md): integrated technical evidence and release boundaries.
 - [P4.2 security review](./docs/P4.2-security-review.md): workflow, secret, and supply-chain findings.
@@ -37,6 +36,7 @@ P2.4 compatibility work is under `src/Cloudflare.Normalization/Compatibility` an
 - [P4.2 checklist](./docs/P4.2-release-checklist.md): final RC evidence checklist.
 - [Support matrix](./docs/support-matrix.md): declared Windows-first support boundary.
 - [Development principles](./docs/development-principles.md): durable rules for model, generator, runtime, and evidence work.
+- [Archived plans and progress](./docs/archive/2026-10-03/README.md): superseded P3/P4 implementation records.
 
 The current authoritative PowerShell surface is handwritten. Generated metadata must remain transport-neutral, and unresolved behavior—such as HTTP `2xx` with `success=false`—is not silently defined by the runtime.
 

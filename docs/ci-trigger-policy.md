@@ -2,8 +2,10 @@
 
 ## Status
 
-**Implemented locally on `codex-petal/ci-docs-only-routing`; remote acceptance
-pending.** `.github/workflows/p34-ci.yml` starts on every `push`,
+**CI-01 merged to `main` through PR #8; remote acceptance pending.** This
+branch proposes the new-branch baseline refinement; its remote result is not
+yet part of the accepted evidence.
+`.github/workflows/p34-ci.yml` starts on every `push`,
 `pull_request`, and manual dispatch. The `changes` job runs the PowerShell
 classifier before the eight heavy jobs. The always-created `CI status` job
 evaluates the classifier result and every heavy job result.
@@ -51,10 +53,14 @@ Markdown under `.github/`, `tools/`, `tests/`, `fixtures/`, `artifacts/`,
 `src/`, `module/`, `ref/`, `release/`, `packaging/`, `schema/`, or `build/`
 requires full CI, as does `LICENSE.md`. The classifier compares the
 push event's before/after commits, or the pull request base commit against its
-checked-out merge commit. It checks ancestry or the expected first parent,
-uses a NUL-delimited diff with rename detection disabled, and rejects an
-empty or unresolved diff. A new branch push without a usable before commit
-therefore fails closed; run a later branch push or pull request for evidence.
+checked-out merge commit. For a new branch's first push, where `before` is all
+zeroes and the event says the branch was created, it instead compares the
+checked-out commit against its unique merge base with the repository's default
+branch. This includes earlier code commits on a branch whose latest commit is
+documentation-only. The classifier checks ancestry or the expected first
+parent, uses a NUL-delimited diff with rename detection disabled, and rejects
+an empty or unresolved diff. A missing default-branch ref, absent or ambiguous
+merge base, or inconsistent creation signal fails closed.
 
 The classifier must run in PowerShell and fail closed if the event diff cannot
 be resolved. Manual `workflow_dispatch` runs must default to
@@ -64,7 +70,7 @@ classification and stable status contract.
 
 ## Required workflow shape
 
-The implementation should preserve the existing job graph and add the
+The implementation preserves the existing job graph and adds the
 classification dependency explicitly:
 
 ```yaml
@@ -102,8 +108,8 @@ is not part of this routing change.
 
 ## Evidence and acceptance gates
 
-Before enabling the policy, verify all of the following in a pull request and
-on a branch push:
+To complete acceptance for this workflow revision, verify all of the following
+in a pull request and on a branch push:
 
 1. A change under `docs/**` creates `CI status`, runs no heavy Windows job, and
    is mergeable when the stable check passes.
@@ -120,12 +126,14 @@ on a branch push:
 `tests/CiDocsOnlyRouting.Tests.ps1` uses temporary Git commits to exercise
 the classification matrix and tests the stable status evaluator for expected
 success, intentional skips, classifier failure, failed or cancelled heavy
-jobs, and unexpected skips. The local run passed 26 routing assertions,
-`tests/P34CiGates.Tests.ps1`, `tests/P42Security.Tests.ps1`, YAML parsing and
-job dependency checks, and `git diff --check`. These establish local script
-behavior only.
+jobs, and unexpected skips. The new-branch matrix also covers first-push
+documentation, root Markdown, mixed changes, workflow changes, earlier code
+commits, and a missing default-branch ref. The local run passed 35 routing
+assertions, `tests/P34CiGates.Tests.ps1`, `tests/P42Security.Tests.ps1`, YAML
+parsing and job dependency checks, and `git diff --check`. These establish
+local script behavior only.
 
-Remote evidence is still needed: a branch push and pull request for each
+Remote evidence is still needed: a new-branch first push and pull request for each
 documentation-only case, a mixed or workflow change, and manual dispatch;
 inspect the `Classify changes`, eight heavy jobs, and `CI status` conclusions
 on those exact runs. A controlled failure/cancellation or unexpected-skip

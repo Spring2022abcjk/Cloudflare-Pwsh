@@ -13,16 +13,16 @@ remote CI, and repository settings when starting each task.
 | 1 | REL-01: license and P4.2 metadata closure | License choice is outstanding; Gallery preflight is NotReady. | Final license decision, matching `LICENSE`/manifest metadata, preflight, fresh exact-HEAD local and remote evidence. |
 | 1 | REL-02: P4.3 final candidate decision | Waits for REL-01 and reconciliation of bounded P3.5/P4.1 evidence. | Exact candidate identity, package provenance, limits and release notes reviewed; explicit publish or defer decision. |
 | 2 | DOC-01: durable roadmap and issue routing | This document and the roadmap record proposals and separate issues. | Links, status wording, and evidence classes remain consistent; no implied release or admission. |
-| 2 | CI-01: documentation-only CI routing | [Design](./ci-trigger-policy.md) exists; workflow still runs all eight jobs for every push/PR. | Classifier boundary tests, fail-closed stable status, full-gate and docs-only branch/PR runs; required-check configuration verified separately. |
+| 2 | CI-01: documentation-only CI routing | Implemented on `main` through PR #8; [CI engineering](./ci-engineering.md) records the workflow and the unverified new-branch refinement. Remote acceptance remains open. | Full-gate and docs-only branch/PR runs for the current revision, manual and failure cases, and required `CI status` check configuration; see the [contract](./ci-trigger-policy.md). |
 | 3 | ARCH-01: P6.1 SDK architecture design | P6 remains a proposal. | Reviewed module boundaries, Accounts/Core, Module Planner, type/version rules, migration and provenance plan. |
 | 3 | ARCH-02: context, discovery, raw API design | Follows ARCH-01; no new public commands implied. | Explicit scope and credential rules, raw-call safety, discovery accuracy, compatibility review. |
 | 4 | ADM-01: bounded common-workflow pilot | Follows architecture decisions and the existing explicit-admission policy. | Per-workflow projection/runtime/help/mock/compatibility/coverage/admission parity and separately scoped live evidence if required. |
 | 4 | REF-01: reference checkout cache migration | [Plan](./ref-checkout-cache-maintenance.md) exists; per-worktree `ref/` remains authoritative. | Pinned hashes, isolated checkout paths, regression/provenance gates, no loss of retained evidence. |
 
-REL-01/REL-02 and ARCH-01 may be planned independently. CI-01 can be
-implemented without waiting for a license or P4.3 decision. Keep CI workflow
-changes in a focused implementation branch so their remote validation is
-attributable. REF-01 is a separate storage migration and is not a CI shortcut.
+REL-01/REL-02 and ARCH-01 may be planned independently. CI-01 remote
+acceptance does not wait for a license or P4.3 decision. Keep subsequent CI
+workflow changes attributable to an exact head and rerun the remote matrix.
+REF-01 is a separate storage migration and is not a CI shortcut.
 
 ## Retained findings and engineering debt
 
