@@ -2,9 +2,10 @@
 
 ## Status
 
-**CI-01 merged to `main` through PR #8; remote acceptance pending.** This
-branch proposes the new-branch baseline refinement; its remote result is not
-yet part of the accepted evidence.
+**CI-01 implementation and first-push refinement merged through PRs #8 and #9;
+acceptance remains incomplete.** The current baseline is `776d261`.
+See [the exact acceptance ledger](./ci-01-acceptance.md) for current versus
+historical runs, missing scenarios, isolated probes, and proposed main protection.
 `.github/workflows/p34-ci.yml` starts on every `push`,
 `pull_request`, and manual dispatch. The `changes` job runs the PowerShell
 classifier before the eight heavy jobs. The always-created `CI status` job
@@ -137,8 +138,8 @@ Remote evidence is still needed: a new-branch first push and pull request for ea
 documentation-only case, a mixed or workflow change, and manual dispatch;
 inspect the `Classify changes`, eight heavy jobs, and `CI status` conclusions
 on those exact runs. A controlled failure/cancellation or unexpected-skip
-probe must also demonstrate that `CI status` rejects the result. Branch
-protection on `main` is currently absent; require the stable `CI status`
+probe must also demonstrate that `CI status` rejects the result. At the 2026-10-03 inspection, branch
+protection and effective rules on `main` were absent; require the stable `CI status`
 check after its check context is available, then verify mergeability for a
 documentation-only pull request. No Gallery, Cloudflare account, mutation, or
 release action is implied by this policy.

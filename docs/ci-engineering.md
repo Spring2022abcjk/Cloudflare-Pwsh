@@ -113,16 +113,21 @@ pending.
 
 ## Evidence at 2026-10-03
 
-- PR #8's `pull_request` run [36559817847](https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/36559817847)
-  passed classification, all eight heavy jobs, and `CI status` on
-  `7441663892d2ba03f388065e57bcdbb71db8ffc4`.
-- The `main` push run [37028341206](https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37028341206)
-  passed the same ten jobs on merge commit
-  `f8dec17db6a2f738fe4ab4e2e3dd0e91b3573917`.
-- The first push of the former CI-01 branch failed on its zero `before` SHA
-  under the earlier classifier. The new-branch merge-base refinement has
-  local tests only at this document revision. It still needs a remote first
-  push containing only approved documentation paths.
-- The repository currently reports no `main` branch protection or matching
-  ruleset. Required-check configuration and the complete remote matrix in
-  the trigger policy remain open acceptance items.
+The implementation and new-branch merge-base refinement are merged through PRs
+#8 and #9. The current main SHA is `776d26111eacea2708152a084d4124e3bc8f82da`.
+Its push run [37048018290](https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37048018290)
+classified the mixed docs/tools/tests/workflow comparison from `f8dec17` as
+requires-ci; all eight heavy jobs and CI status succeeded.
+
+The [CI-01 acceptance ledger](./ci-01-acceptance.md) records exact run heads,
+PR checkout SHA, comparisons, individual job conclusions, historical runs,
+missing remote scenarios, and six locally prepared isolated probes. Older PR #8
+and PR #9 runs do not substitute for acceptance at current main or a new probe SHA.
+Documentation first-push/PR, root Markdown, dedicated mixed/workflow probes,
+manual dispatch, current fault rejection, and protected PR checks remain open.
+
+Read-only inspection found no main protection, repository ruleset, or effective
+branch rule. The [proposed protection payload](./ci-01-main-protection.json)
+requires CI status only. It has not been applied. Remote pushes, test PRs,
+dispatch, and protection writes await explicit session authorization. CI-01 is
+not Complete based on local tests or the successful current main run alone.
