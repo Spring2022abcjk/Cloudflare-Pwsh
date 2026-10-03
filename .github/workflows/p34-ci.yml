@@ -255,3 +255,5 @@ jobs:
         env:
           NEEDS_JSON: ${{ toJSON(needs) }}
         run: ./tools/Test-CiStatus.ps1 -NeedsJson $env:NEEDS_JSON
+
+# CI-01 isolated workflow-path probe; job graph unchanged.
