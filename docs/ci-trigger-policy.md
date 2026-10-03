@@ -2,10 +2,16 @@
 
 ## Status
 
-**CI-01 implementation and first-push refinement merged through PRs #8 and #9;
-acceptance remains incomplete.** The current baseline is `776d261`.
-See [the exact acceptance ledger](./ci-01-acceptance.md) for current versus
-historical runs, missing scenarios, isolated probes, and proposed main protection.
+**CI-01 Complete for main `776d26111eacea2708152a084d4124e3bc8f82da`.**
+Implementation and the first-push refinement merged through PRs #8 and #9.
+The authorized 2026-10-03/04 (Asia/Taipei) acceptance verified thirteen new
+exact-SHA runs and applied main protection requiring GitHub Actions `CI status`
+only. Four normal ready test PRs were CLEAN; two fault PRs were BLOCKED.
+See [the acceptance ledger](./ci-01-acceptance.md), [exact remote runs](./ci-01-remote-runs.md),
+and [protection readback](./ci-01-protection-evidence.json). Test PRs and remote
+probe refs were cleaned up without merging. Acceptance documentation is local;
+CI acceptance does not authorize release or future protection changes.
+
 `.github/workflows/p34-ci.yml` starts on every `push`,
 `pull_request`, and manual dispatch. The `changes` job runs the PowerShell
 classifier before the eight heavy jobs. The always-created `CI status` job
@@ -134,12 +140,13 @@ assertions, `tests/P34CiGates.Tests.ps1`, `tests/P42Security.Tests.ps1`, YAML
 parsing and job dependency checks, and `git diff --check`. These establish
 local script behavior only.
 
-Remote evidence is still needed: a new-branch first push and pull request for each
-documentation-only case, a mixed or workflow change, and manual dispatch;
-inspect the `Classify changes`, eight heavy jobs, and `CI status` conclusions
-on those exact runs. A controlled failure/cancellation or unexpected-skip
-probe must also demonstrate that `CI status` rejects the result. At the 2026-10-03 inspection, branch
-protection and effective rules on `main` were absent; require the stable `CI status`
-check after its check context is available, then verify mergeability for a
-documentation-only pull request. No Gallery, Cloudflare account, mutation, or
-release action is implied by this policy.
+The current mandatory remote matrix is complete: docs/** and root Markdown
+first pushes and PRs, mixed and workflow path pushes and PRs, manual full CI,
+and isolated classifier-failure/unexpected-skip pushes and PRs. Every run
+records the classifier, all eight heavy jobs, and CI status. Applied classic
+main protection requires only CI status from GitHub Actions app ID 15368,
+uses strict up-to-date checks, and enforces administrators. Ready documentation
+PRs were CLEAN despite eight intentional heavy skips; ready fault PRs were
+BLOCKED with failed required checks. See the linked acceptance ledger for
+exact heads, comparisons, links, cleanup, and remaining limits. Historical
+runs and local tests are not substitutes for these fresh remote results.

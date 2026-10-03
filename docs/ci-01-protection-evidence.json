@@ -1,0 +1,233 @@
+{
+  "captured_at_utc": "2026-10-03T16:54:59.3331105+00:00",
+  "timezone": "Asia/Taipei",
+  "main_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+  "protection_source": "classic branch protection",
+  "required_status_checks": {
+    "url": "https://api.github.com/repos/Spring2022abcjk/Cloudflare-Pwsh/branches/main/protection/required_status_checks",
+    "strict": true,
+    "contexts": [
+      "CI status"
+    ],
+    "contexts_url": "https://api.github.com/repos/Spring2022abcjk/Cloudflare-Pwsh/branches/main/protection/required_status_checks/contexts",
+    "checks": [
+      {
+        "context": "CI status",
+        "app_id": 15368
+      }
+    ]
+  },
+  "enforce_admins": true,
+  "allow_force_pushes": false,
+  "allow_deletions": false,
+  "repository_rulesets": [],
+  "effective_ruleset_rules": [],
+  "protected_prs": [
+    {
+      "number": 10,
+      "branch": "codex-petal/ci-acceptance-probe-docs",
+      "head_sha": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+      "base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+      "draft": false,
+      "mergeable": "MERGEABLE",
+      "merge_state": "CLEAN",
+      "required_checks": [
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872259",
+          "name": "CI status",
+          "state": "SUCCESS"
+        },
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650626",
+          "name": "CI status",
+          "state": "SUCCESS"
+        }
+      ],
+      "required_check_exit": 0,
+      "expected_failure": false
+    },
+    {
+      "number": 11,
+      "branch": "codex-petal/ci-acceptance-probe-root",
+      "head_sha": "96694725a7509ba3434e3cb48d8cdfc53272a64d",
+      "base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+      "draft": false,
+      "mergeable": "MERGEABLE",
+      "merge_state": "CLEAN",
+      "required_checks": [
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236253064",
+          "name": "CI status",
+          "state": "SUCCESS"
+        },
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051148",
+          "name": "CI status",
+          "state": "SUCCESS"
+        }
+      ],
+      "required_check_exit": 0,
+      "expected_failure": false
+    },
+    {
+      "number": 12,
+      "branch": "codex-petal/ci-acceptance-probe-classifier-failure",
+      "head_sha": "033b223fe7e0e54bcacc96d0b2c92e85be740c62",
+      "base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+      "draft": false,
+      "mergeable": "MERGEABLE",
+      "merge_state": "BLOCKED",
+      "required_checks": [
+        {
+          "bucket": "fail",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236722032",
+          "name": "CI status",
+          "state": "FAILURE"
+        },
+        {
+          "bucket": "fail",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480372",
+          "name": "CI status",
+          "state": "FAILURE"
+        }
+      ],
+      "required_check_exit": 0,
+      "expected_failure": true
+    },
+    {
+      "number": 13,
+      "branch": "codex-petal/ci-acceptance-probe-unexpected-skip",
+      "head_sha": "6d9858f8f20082af384064ff42c571206e730fc6",
+      "base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+      "draft": false,
+      "mergeable": "MERGEABLE",
+      "merge_state": "BLOCKED",
+      "required_checks": [
+        {
+          "bucket": "fail",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080585",
+          "name": "CI status",
+          "state": "FAILURE"
+        },
+        {
+          "bucket": "fail",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920490",
+          "name": "CI status",
+          "state": "FAILURE"
+        }
+      ],
+      "required_check_exit": 0,
+      "expected_failure": true
+    },
+    {
+      "number": 14,
+      "branch": "codex-petal/ci-acceptance-probe-mixed",
+      "head_sha": "b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+      "base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+      "draft": false,
+      "mergeable": "MERGEABLE",
+      "merge_state": "CLEAN",
+      "required_checks": [
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111240843422",
+          "name": "CI status",
+          "state": "SUCCESS"
+        },
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111238981246",
+          "name": "CI status",
+          "state": "SUCCESS"
+        }
+      ],
+      "required_check_exit": 0,
+      "expected_failure": false
+    },
+    {
+      "number": 15,
+      "branch": "codex-petal/ci-acceptance-probe-workflow",
+      "head_sha": "69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+      "base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+      "draft": false,
+      "mergeable": "MERGEABLE",
+      "merge_state": "CLEAN",
+      "required_checks": [
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111244208136",
+          "name": "CI status",
+          "state": "SUCCESS"
+        },
+        {
+          "bucket": "pass",
+          "link": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111242691694",
+          "name": "CI status",
+          "state": "SUCCESS"
+        }
+      ],
+      "required_check_exit": 0,
+      "expected_failure": false
+    }
+  ],
+  "cleanup": [
+    {
+      "pr": 10,
+      "branch": "codex-petal/ci-acceptance-probe-docs",
+      "head": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+      "closed": true,
+      "merged": false,
+      "remote_ref_deleted": true,
+      "recorded_at_utc": "2026-10-04T00:51:14.0088105+08:00"
+    },
+    {
+      "pr": 11,
+      "branch": "codex-petal/ci-acceptance-probe-root",
+      "head": "96694725a7509ba3434e3cb48d8cdfc53272a64d",
+      "closed": true,
+      "merged": false,
+      "remote_ref_deleted": true,
+      "recorded_at_utc": "2026-10-04T00:51:21.4004272+08:00"
+    },
+    {
+      "pr": 12,
+      "branch": "codex-petal/ci-acceptance-probe-classifier-failure",
+      "head": "033b223fe7e0e54bcacc96d0b2c92e85be740c62",
+      "closed": true,
+      "merged": false,
+      "remote_ref_deleted": true,
+      "recorded_at_utc": "2026-10-04T00:51:28.4332357+08:00"
+    },
+    {
+      "pr": 13,
+      "branch": "codex-petal/ci-acceptance-probe-unexpected-skip",
+      "head": "6d9858f8f20082af384064ff42c571206e730fc6",
+      "closed": true,
+      "merged": false,
+      "remote_ref_deleted": true,
+      "recorded_at_utc": "2026-10-04T00:51:34.8035452+08:00"
+    },
+    {
+      "pr": 14,
+      "branch": "codex-petal/ci-acceptance-probe-mixed",
+      "head": "b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+      "closed": true,
+      "merged": false,
+      "remote_ref_deleted": true,
+      "recorded_at_utc": "2026-10-04T00:51:44.8396736+08:00"
+    },
+    {
+      "pr": 15,
+      "branch": "codex-petal/ci-acceptance-probe-workflow",
+      "head": "69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+      "closed": true,
+      "merged": false,
+      "remote_ref_deleted": true,
+      "recorded_at_utc": "2026-10-04T00:51:54.9354197+08:00"
+    }
+  ]
+}

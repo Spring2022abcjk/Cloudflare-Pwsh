@@ -111,23 +111,37 @@ revision. Require the stable `CI status` context, not each conditional heavy
 job. Avoid workflow-level path filters, which can leave a required check
 pending.
 
-## Evidence at 2026-10-03
+## Accepted evidence at 2026-10-04 (Asia/Taipei)
 
-The implementation and new-branch merge-base refinement are merged through PRs
-#8 and #9. The current main SHA is `776d26111eacea2708152a084d4124e3bc8f82da`.
-Its push run [37048018290](https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37048018290)
-classified the mixed docs/tools/tests/workflow comparison from `f8dec17` as
-requires-ci; all eight heavy jobs and CI status succeeded.
+CI-01 is Complete for main `776d26111eacea2708152a084d4124e3bc8f82da`.
+The implementation and first-push merge-base refinement merged through PRs
+#8 and #9. Its main mixed push [37048018290](https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37048018290)
+remains current-main evidence; acceptance additionally used thirteen fresh,
+isolated exact-SHA runs rather than older PR successes.
 
-The [CI-01 acceptance ledger](./ci-01-acceptance.md) records exact run heads,
-PR checkout SHA, comparisons, individual job conclusions, historical runs,
-missing remote scenarios, and six locally prepared isolated probes. Older PR #8
-and PR #9 runs do not substitute for acceptance at current main or a new probe SHA.
-Documentation first-push/PR, root Markdown, dedicated mixed/workflow probes,
-manual dispatch, current fault rejection, and protected PR checks remain open.
+The [acceptance ledger](./ci-01-acceptance.md) maps docs/** and root Markdown
+first pushes/PRs, mixed and workflow path pushes/PRs, manual forcing, and
+classifier-failure/unexpected-skip rejection to their exact runs. Nine normal
+runs succeeded; four isolated fault runs failed as expected. All five full-CI
+runs passed eight heavy jobs and preserved the three report/candidate artifacts.
+No implementation repair or artifact-flow change was needed.
 
-Read-only inspection found no main protection, repository ruleset, or effective
-branch rule. The [proposed protection payload](./ci-01-main-protection.json)
-requires CI status only. It has not been applied. Remote pushes, test PRs,
-dispatch, and protection writes await explicit session authorization. CI-01 is
-not Complete based on local tests or the successful current main run alone.
+[Exact remote run evidence](./ci-01-remote-runs.md) and its
+[JSON counterpart](./ci-01-remote-evidence.json) distinguish API head SHA,
+actual PR merge checkout, classifier input, event range, all ten job results,
+and run/job links. The invalid-head fault was delivered as `0` by YAML and
+failed before a comparison; its actual checkout is recorded separately.
+
+The [applied protection payload](./ci-01-main-protection.json) requires only
+GitHub Actions CI status (app ID 15368), with strict checks and administrator
+enforcement. [Readback and protected PR evidence](./ci-01-protection-evidence.json)
+confirmed four normal ready PRs CLEAN and two fault ready PRs BLOCKED. Classic
+branch protection is active; repository rulesets and effective ruleset rules
+remain empty. Empty ruleset APIs do not mean main is unprotected.
+
+All six test PRs were closed unmerged and their remote probe refs deleted.
+Local probe commits/worktrees and external logs remain for audit. The acceptance
+documentation is committed locally on codex-petal/ci-acceptance and was not
+pushed under the probe/configuration authorization. Future executable CI edits
+need new exact-SHA evidence. Remote cancellation and merge queues were not
+accepted by this matrix; Gallery and real-account release gates are separate.

@@ -113,10 +113,13 @@ through a manual workflow-dispatch entry in an isolated temporary checkout.
 PowerShell Gallery publication, real-account validation, and broader public
 admission remain later decisions.
 
-CI-01 documentation-only routing was merged through PR #8. The classifier and
-stable `CI status` check are implemented; the new-branch baseline refinement
-and the remote acceptance matrix remain open. See the [CI trigger policy](./ci-trigger-policy.md),
+CI-01 is Complete for main `776d261`: PRs #8/#9 merged the implementation and
+first-push refinement; thirteen fresh remote runs verified routing and fault
+rejection, and main now requires the stable `CI status` check. Normal ready
+test PRs were CLEAN and fault PRs BLOCKED before unmerged cleanup. See the
+[acceptance ledger](./ci-01-acceptance.md), [CI trigger policy](./ci-trigger-policy.md),
 [CI engineering guide](./ci-engineering.md), and [next-phase task register](./next-phase-task-register.md).
+Acceptance documentation remains local; release and future CI edits keep their own gates.
 
 #### P3.4 integration closure
 
