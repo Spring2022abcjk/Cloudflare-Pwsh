@@ -101,3 +101,5 @@ if (-not [string]::IsNullOrWhiteSpace($OutputPath)) {
     [IO.File]::AppendAllText($OutputPath, "docs_only=$value`n", [Text.UTF8Encoding]::new($false))
 }
 Write-Output "docs_only=$value"
+
+# CI-01 isolated mixed-path probe; behavior unchanged.
