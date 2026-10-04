@@ -13,8 +13,9 @@
 - [架构](./architecture.md)：长期 pipeline、层边界、已确认架构事实和 deferred boundary。
 - [路线图](./roadmap.md)：当前阶段状态、P5 维护方向与拟议的 P6 SDK 规模化设计。
 - [后续任务清单](./next-phase-task-register.md)：首个候选、CI、ref、P6 和保留问题的优先级与证据边界。
-- [CI engineering](./ci-engineering.md)：当前 CI 工作流、变更分类、稳定状态检查及远端证据缺口。
-- [CI trigger policy](./ci-trigger-policy.md)：仅文档变更的 CI 验收契约；远端矩阵和必需检查设置尚待完成。
+- [CI engineering](./ci-engineering.md)：当前 CI 工作流、变更分类、稳定状态检查及已验收的远端证据。
+- [CI trigger policy](./ci-trigger-policy.md)：仅文档变更的 CI 验收契约；`776d261` 的远端矩阵与必需检查已闭环。
+- [CI-01 acceptance](./ci-01-acceptance.md)：13 次精确运行、保护规则回读、测试 PR/分支清理和证据范围；文档分支推送已另获授权，尚未合并。
 - [Reference checkout/cache maintenance](./ref-checkout-cache-maintenance.md)：后续集中缓存、独立 checkout 和清理验收方案；当前不实施。
 - [开发原则](./development-principles.md)：后续 agent 必须遵守的长期规则。
 - [P2.1 总结](./P2.1-summary.md)：Zones、D1、AI Search 跨资源归一化、投影快照和回归结果。

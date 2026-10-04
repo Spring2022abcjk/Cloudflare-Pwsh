@@ -1,0 +1,979 @@
+[
+  {
+    "id": 37134319713,
+    "attempt": 1,
+    "event": "push",
+    "case": "docs",
+    "branch": "codex-petal/ci-acceptance-probe-docs",
+    "head_sha": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "checkout_sha": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "event_base_sha": "0000000000000000000000000000000000000000",
+    "classifier_head_input": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "push_created": "true",
+    "comparison": "merge-base(origin/main, checkout)=776d26111eacea2708152a084d4124e3bc8f82da -> 12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "changed_paths": [
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "true",
+    "conclusion": "success",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713",
+    "pr": 10,
+    "jobs": {
+      "Classify changes": {
+        "id": 111235611013,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235611013"
+      },
+      "Build": {
+        "id": 111235650287,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650287"
+      },
+      "Deterministic generation": {
+        "id": 111235650887,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650887"
+      },
+      "Unit and runtime smoke": {
+        "id": 111235650606,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650606"
+      },
+      "P1-P2.4 regression": {
+        "id": 111235650834,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650834"
+      },
+      "Compatibility gate": {
+        "id": 111235651072,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235651072"
+      },
+      "Coverage gate": {
+        "id": 111235650501,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650501"
+      },
+      "Release and security preflight": {
+        "id": 111235650568,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650568"
+      },
+      "Package candidate and smoke": {
+        "id": 111235651120,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235651120"
+      },
+      "CI status": {
+        "id": 111235650626,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134319713/job/111235650626"
+      }
+    }
+  },
+  {
+    "id": 37134396096,
+    "attempt": 1,
+    "event": "pull_request",
+    "case": "docs",
+    "branch": "codex-petal/ci-acceptance-probe-docs",
+    "head_sha": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "checkout_sha": "021d25d9e908ed39b70c087dbcf2ac4fa315e506",
+    "event_base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+    "classifier_head_input": "021d25d9e908ed39b70c087dbcf2ac4fa315e506",
+    "push_created": "false",
+    "comparison": "776d26111eacea2708152a084d4124e3bc8f82da -> 021d25d9e908ed39b70c087dbcf2ac4fa315e506",
+    "changed_paths": [
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "true",
+    "conclusion": "success",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096",
+    "pr": 10,
+    "jobs": {
+      "Classify changes": {
+        "id": 111235833449,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235833449"
+      },
+      "Build": {
+        "id": 111235871915,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235871915"
+      },
+      "Deterministic generation": {
+        "id": 111235872138,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872138"
+      },
+      "Unit and runtime smoke": {
+        "id": 111235872215,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872215"
+      },
+      "P1-P2.4 regression": {
+        "id": 111235872548,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872548"
+      },
+      "Compatibility gate": {
+        "id": 111235873030,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235873030"
+      },
+      "Coverage gate": {
+        "id": 111235872157,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872157"
+      },
+      "Release and security preflight": {
+        "id": 111235872739,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872739"
+      },
+      "Package candidate and smoke": {
+        "id": 111235873005,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235873005"
+      },
+      "CI status": {
+        "id": 111235872259,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134396096/job/111235872259"
+      }
+    }
+  },
+  {
+    "id": 37134458983,
+    "attempt": 1,
+    "event": "push",
+    "case": "root",
+    "branch": "codex-petal/ci-acceptance-probe-root",
+    "head_sha": "96694725a7509ba3434e3cb48d8cdfc53272a64d",
+    "checkout_sha": "96694725a7509ba3434e3cb48d8cdfc53272a64d",
+    "event_base_sha": "0000000000000000000000000000000000000000",
+    "classifier_head_input": "96694725a7509ba3434e3cb48d8cdfc53272a64d",
+    "push_created": "true",
+    "comparison": "merge-base(origin/main, checkout)=776d26111eacea2708152a084d4124e3bc8f82da -> 96694725a7509ba3434e3cb48d8cdfc53272a64d",
+    "changed_paths": [
+      "CI-01-acceptance-probe.md"
+    ],
+    "docs_only": "true",
+    "conclusion": "success",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983",
+    "pr": 11,
+    "jobs": {
+      "Classify changes": {
+        "id": 111236029587,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236029587"
+      },
+      "Build": {
+        "id": 111236051325,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051325"
+      },
+      "Deterministic generation": {
+        "id": 111236051104,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051104"
+      },
+      "Unit and runtime smoke": {
+        "id": 111236051683,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051683"
+      },
+      "P1-P2.4 regression": {
+        "id": 111236051239,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051239"
+      },
+      "Compatibility gate": {
+        "id": 111236051462,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051462"
+      },
+      "Coverage gate": {
+        "id": 111236051351,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051351"
+      },
+      "Release and security preflight": {
+        "id": 111236051674,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051674"
+      },
+      "Package candidate and smoke": {
+        "id": 111236051621,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051621"
+      },
+      "CI status": {
+        "id": 111236051148,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134458983/job/111236051148"
+      }
+    }
+  },
+  {
+    "id": 37134523958,
+    "attempt": 1,
+    "event": "pull_request",
+    "case": "root",
+    "branch": "codex-petal/ci-acceptance-probe-root",
+    "head_sha": "96694725a7509ba3434e3cb48d8cdfc53272a64d",
+    "checkout_sha": "56dbe16263669ec286c45c3730ee9e360b977696",
+    "event_base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+    "classifier_head_input": "56dbe16263669ec286c45c3730ee9e360b977696",
+    "push_created": "false",
+    "comparison": "776d26111eacea2708152a084d4124e3bc8f82da -> 56dbe16263669ec286c45c3730ee9e360b977696",
+    "changed_paths": [
+      "CI-01-acceptance-probe.md"
+    ],
+    "docs_only": "true",
+    "conclusion": "success",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958",
+    "pr": 11,
+    "jobs": {
+      "Classify changes": {
+        "id": 111236224049,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236224049"
+      },
+      "Build": {
+        "id": 111236252748,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236252748"
+      },
+      "Deterministic generation": {
+        "id": 111236252885,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236252885"
+      },
+      "Unit and runtime smoke": {
+        "id": 111236252959,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236252959"
+      },
+      "P1-P2.4 regression": {
+        "id": 111236252678,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236252678"
+      },
+      "Compatibility gate": {
+        "id": 111236253537,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236253537"
+      },
+      "Coverage gate": {
+        "id": 111236252964,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236252964"
+      },
+      "Release and security preflight": {
+        "id": 111236252903,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236252903"
+      },
+      "Package candidate and smoke": {
+        "id": 111236253780,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236253780"
+      },
+      "CI status": {
+        "id": 111236253064,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134523958/job/111236253064"
+      }
+    }
+  },
+  {
+    "id": 37134600097,
+    "attempt": 1,
+    "event": "push",
+    "case": "classifier-failure",
+    "branch": "codex-petal/ci-acceptance-probe-classifier-failure",
+    "head_sha": "033b223fe7e0e54bcacc96d0b2c92e85be740c62",
+    "checkout_sha": "033b223fe7e0e54bcacc96d0b2c92e85be740c62",
+    "event_base_sha": "0000000000000000000000000000000000000000",
+    "classifier_head_input": "0",
+    "push_created": "true",
+    "comparison": "unresolved; invalid classifier head input",
+    "changed_paths": [
+      ".github/workflows/p34-ci.yml",
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "not emitted (classification failed)",
+    "conclusion": "failure",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097",
+    "pr": 12,
+    "jobs": {
+      "Classify changes": {
+        "id": 111236446553,
+        "conclusion": "failure",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236446553"
+      },
+      "Build": {
+        "id": 111236480449,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480449"
+      },
+      "Deterministic generation": {
+        "id": 111236480691,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480691"
+      },
+      "Unit and runtime smoke": {
+        "id": 111236480607,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480607"
+      },
+      "P1-P2.4 regression": {
+        "id": 111236480692,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480692"
+      },
+      "Compatibility gate": {
+        "id": 111236481033,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236481033"
+      },
+      "Coverage gate": {
+        "id": 111236480444,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480444"
+      },
+      "Release and security preflight": {
+        "id": 111236480431,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480431"
+      },
+      "Package candidate and smoke": {
+        "id": 111236481067,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236481067"
+      },
+      "CI status": {
+        "id": 111236480372,
+        "conclusion": "failure",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134600097/job/111236480372"
+      }
+    }
+  },
+  {
+    "id": 37134685573,
+    "attempt": 1,
+    "event": "pull_request",
+    "case": "classifier-failure",
+    "branch": "codex-petal/ci-acceptance-probe-classifier-failure",
+    "head_sha": "033b223fe7e0e54bcacc96d0b2c92e85be740c62",
+    "checkout_sha": "0ddc75120c761ce888a991b5d4cc36061d3c562b",
+    "event_base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+    "classifier_head_input": "0",
+    "push_created": "false",
+    "comparison": "unresolved; invalid classifier head input",
+    "changed_paths": [
+      ".github/workflows/p34-ci.yml",
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "not emitted (classification failed)",
+    "conclusion": "failure",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573",
+    "pr": 12,
+    "jobs": {
+      "Classify changes": {
+        "id": 111236700696,
+        "conclusion": "failure",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236700696"
+      },
+      "Build": {
+        "id": 111236721721,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236721721"
+      },
+      "Deterministic generation": {
+        "id": 111236721540,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236721540"
+      },
+      "Unit and runtime smoke": {
+        "id": 111236721692,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236721692"
+      },
+      "P1-P2.4 regression": {
+        "id": 111236721867,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236721867"
+      },
+      "Compatibility gate": {
+        "id": 111236722160,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236722160"
+      },
+      "Coverage gate": {
+        "id": 111236721800,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236721800"
+      },
+      "Release and security preflight": {
+        "id": 111236721830,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236721830"
+      },
+      "Package candidate and smoke": {
+        "id": 111236722561,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236722561"
+      },
+      "CI status": {
+        "id": 111236722032,
+        "conclusion": "failure",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134685573/job/111236722032"
+      }
+    }
+  },
+  {
+    "id": 37134748920,
+    "attempt": 1,
+    "event": "push",
+    "case": "unexpected-skip",
+    "branch": "codex-petal/ci-acceptance-probe-unexpected-skip",
+    "head_sha": "6d9858f8f20082af384064ff42c571206e730fc6",
+    "checkout_sha": "6d9858f8f20082af384064ff42c571206e730fc6",
+    "event_base_sha": "0000000000000000000000000000000000000000",
+    "classifier_head_input": "6d9858f8f20082af384064ff42c571206e730fc6",
+    "push_created": "true",
+    "comparison": "merge-base(origin/main, checkout)=776d26111eacea2708152a084d4124e3bc8f82da -> 6d9858f8f20082af384064ff42c571206e730fc6",
+    "changed_paths": [
+      ".github/workflows/p34-ci.yml",
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "false",
+    "conclusion": "failure",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920",
+    "pr": 13,
+    "jobs": {
+      "Classify changes": {
+        "id": 111236892347,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236892347"
+      },
+      "Build": {
+        "id": 111236920012,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920012"
+      },
+      "Deterministic generation": {
+        "id": 111236920449,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920449"
+      },
+      "Unit and runtime smoke": {
+        "id": 111236920622,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920622"
+      },
+      "P1-P2.4 regression": {
+        "id": 111236920634,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920634"
+      },
+      "Compatibility gate": {
+        "id": 111236920564,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920564"
+      },
+      "Coverage gate": {
+        "id": 111236920693,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920693"
+      },
+      "Release and security preflight": {
+        "id": 111236920228,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920228"
+      },
+      "Package candidate and smoke": {
+        "id": 111236921219,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236921219"
+      },
+      "CI status": {
+        "id": 111236920490,
+        "conclusion": "failure",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134748920/job/111236920490"
+      }
+    }
+  },
+  {
+    "id": 37134800998,
+    "attempt": 1,
+    "event": "pull_request",
+    "case": "unexpected-skip",
+    "branch": "codex-petal/ci-acceptance-probe-unexpected-skip",
+    "head_sha": "6d9858f8f20082af384064ff42c571206e730fc6",
+    "checkout_sha": "71cbc1d7d031cd6f738781498503bc713693b050",
+    "event_base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+    "classifier_head_input": "71cbc1d7d031cd6f738781498503bc713693b050",
+    "push_created": "false",
+    "comparison": "776d26111eacea2708152a084d4124e3bc8f82da -> 71cbc1d7d031cd6f738781498503bc713693b050",
+    "changed_paths": [
+      ".github/workflows/p34-ci.yml",
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "false",
+    "conclusion": "failure",
+    "artifacts": [],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998",
+    "pr": 13,
+    "jobs": {
+      "Classify changes": {
+        "id": 111237045569,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237045569"
+      },
+      "Build": {
+        "id": 111237080691,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080691"
+      },
+      "Deterministic generation": {
+        "id": 111237080619,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080619"
+      },
+      "Unit and runtime smoke": {
+        "id": 111237080653,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080653"
+      },
+      "P1-P2.4 regression": {
+        "id": 111237080836,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080836"
+      },
+      "Compatibility gate": {
+        "id": 111237081158,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237081158"
+      },
+      "Coverage gate": {
+        "id": 111237080439,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080439"
+      },
+      "Release and security preflight": {
+        "id": 111237080422,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080422"
+      },
+      "Package candidate and smoke": {
+        "id": 111237081070,
+        "conclusion": "skipped",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237081070"
+      },
+      "CI status": {
+        "id": 111237080585,
+        "conclusion": "failure",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134800998/job/111237080585"
+      }
+    }
+  },
+  {
+    "id": 37134890985,
+    "attempt": 1,
+    "event": "push",
+    "case": "mixed",
+    "branch": "codex-petal/ci-acceptance-probe-mixed",
+    "head_sha": "b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+    "checkout_sha": "b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+    "event_base_sha": "0000000000000000000000000000000000000000",
+    "classifier_head_input": "b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+    "push_created": "true",
+    "comparison": "merge-base(origin/main, checkout)=776d26111eacea2708152a084d4124e3bc8f82da -> b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+    "changed_paths": [
+      "docs/ci-01-acceptance-probe.md",
+      "tools/Get-CiChangeClassification.ps1"
+    ],
+    "docs_only": "false",
+    "conclusion": "success",
+    "artifacts": [
+      "p34-compatibility-reports",
+      "cloudflare-powershell-p34-candidate",
+      "p34-coverage-reports"
+    ],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985",
+    "pr": 14,
+    "jobs": {
+      "Classify changes": {
+        "id": 111237310857,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237310857"
+      },
+      "Build": {
+        "id": 111237341130,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237341130"
+      },
+      "Deterministic generation": {
+        "id": 111237579902,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237579902"
+      },
+      "Unit and runtime smoke": {
+        "id": 111237579878,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237579878"
+      },
+      "P1-P2.4 regression": {
+        "id": 111237579844,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237579844"
+      },
+      "Compatibility gate": {
+        "id": 111237915831,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237915831"
+      },
+      "Coverage gate": {
+        "id": 111237579879,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237579879"
+      },
+      "Release and security preflight": {
+        "id": 111237579848,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111237579848"
+      },
+      "Package candidate and smoke": {
+        "id": 111238712786,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111238712786"
+      },
+      "CI status": {
+        "id": 111238981246,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37134890985/job/111238981246"
+      }
+    }
+  },
+  {
+    "id": 37135547259,
+    "attempt": 1,
+    "event": "pull_request",
+    "case": "mixed",
+    "branch": "codex-petal/ci-acceptance-probe-mixed",
+    "head_sha": "b8f22d1ff90b8b11ca02f4193104d16b6611eb7e",
+    "checkout_sha": "ac426d62d41b0149898350627e475545f1978559",
+    "event_base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+    "classifier_head_input": "ac426d62d41b0149898350627e475545f1978559",
+    "push_created": "false",
+    "comparison": "776d26111eacea2708152a084d4124e3bc8f82da -> ac426d62d41b0149898350627e475545f1978559",
+    "changed_paths": [
+      "docs/ci-01-acceptance-probe.md",
+      "tools/Get-CiChangeClassification.ps1"
+    ],
+    "docs_only": "false",
+    "conclusion": "success",
+    "artifacts": [
+      "cloudflare-powershell-p34-candidate",
+      "p34-compatibility-reports",
+      "p34-coverage-reports"
+    ],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259",
+    "pr": 14,
+    "jobs": {
+      "Classify changes": {
+        "id": 111239229563,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239229563"
+      },
+      "Build": {
+        "id": 111239270133,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239270133"
+      },
+      "Deterministic generation": {
+        "id": 111239464219,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239464219"
+      },
+      "Unit and runtime smoke": {
+        "id": 111239464260,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239464260"
+      },
+      "P1-P2.4 regression": {
+        "id": 111239464268,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239464268"
+      },
+      "Compatibility gate": {
+        "id": 111239814937,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239814937"
+      },
+      "Coverage gate": {
+        "id": 111239464271,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239464271"
+      },
+      "Release and security preflight": {
+        "id": 111239464292,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111239464292"
+      },
+      "Package candidate and smoke": {
+        "id": 111240544786,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111240544786"
+      },
+      "CI status": {
+        "id": 111240843422,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37135547259/job/111240843422"
+      }
+    }
+  },
+  {
+    "id": 37136170081,
+    "attempt": 1,
+    "event": "push",
+    "case": "workflow",
+    "branch": "codex-petal/ci-acceptance-probe-workflow",
+    "head_sha": "69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+    "checkout_sha": "69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+    "event_base_sha": "0000000000000000000000000000000000000000",
+    "classifier_head_input": "69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+    "push_created": "true",
+    "comparison": "merge-base(origin/main, checkout)=776d26111eacea2708152a084d4124e3bc8f82da -> 69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+    "changed_paths": [
+      ".github/workflows/p34-ci.yml",
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "false",
+    "conclusion": "success",
+    "artifacts": [
+      "cloudflare-powershell-p34-candidate",
+      "p34-coverage-reports",
+      "p34-compatibility-reports"
+    ],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081",
+    "pr": 15,
+    "jobs": {
+      "Classify changes": {
+        "id": 111241029161,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241029161"
+      },
+      "Build": {
+        "id": 111241053486,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241053486"
+      },
+      "Deterministic generation": {
+        "id": 111241259970,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241259970"
+      },
+      "Unit and runtime smoke": {
+        "id": 111241259951,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241259951"
+      },
+      "P1-P2.4 regression": {
+        "id": 111241259985,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241259985"
+      },
+      "Compatibility gate": {
+        "id": 111241736481,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241736481"
+      },
+      "Coverage gate": {
+        "id": 111241259913,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241259913"
+      },
+      "Release and security preflight": {
+        "id": 111241259918,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111241259918"
+      },
+      "Package candidate and smoke": {
+        "id": 111242406728,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111242406728"
+      },
+      "CI status": {
+        "id": 111242691694,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136170081/job/111242691694"
+      }
+    }
+  },
+  {
+    "id": 37136801413,
+    "attempt": 1,
+    "event": "pull_request",
+    "case": "workflow",
+    "branch": "codex-petal/ci-acceptance-probe-workflow",
+    "head_sha": "69aa1b083ed1f5115566e14a5bdfd2e768351c0d",
+    "checkout_sha": "e76237bac11bdb0a034143734bd36e082861ac08",
+    "event_base_sha": "776d26111eacea2708152a084d4124e3bc8f82da",
+    "classifier_head_input": "e76237bac11bdb0a034143734bd36e082861ac08",
+    "push_created": "false",
+    "comparison": "776d26111eacea2708152a084d4124e3bc8f82da -> e76237bac11bdb0a034143734bd36e082861ac08",
+    "changed_paths": [
+      ".github/workflows/p34-ci.yml",
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "false",
+    "conclusion": "success",
+    "artifacts": [
+      "cloudflare-powershell-p34-candidate",
+      "p34-coverage-reports",
+      "p34-compatibility-reports"
+    ],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413",
+    "pr": 15,
+    "jobs": {
+      "Classify changes": {
+        "id": 111242871276,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111242871276"
+      },
+      "Build": {
+        "id": 111242907379,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111242907379"
+      },
+      "Deterministic generation": {
+        "id": 111243146353,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243146353"
+      },
+      "Unit and runtime smoke": {
+        "id": 111243146357,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243146357"
+      },
+      "P1-P2.4 regression": {
+        "id": 111243146366,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243146366"
+      },
+      "Compatibility gate": {
+        "id": 111243475855,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243475855"
+      },
+      "Coverage gate": {
+        "id": 111243146341,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243146341"
+      },
+      "Release and security preflight": {
+        "id": 111243146335,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243146335"
+      },
+      "Package candidate and smoke": {
+        "id": 111243840298,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111243840298"
+      },
+      "CI status": {
+        "id": 111244208136,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37136801413/job/111244208136"
+      }
+    }
+  },
+  {
+    "id": 37137533223,
+    "attempt": 1,
+    "event": "workflow_dispatch",
+    "case": "docs",
+    "branch": "codex-petal/ci-acceptance-probe-docs",
+    "head_sha": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "checkout_sha": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "event_base_sha": "",
+    "classifier_head_input": "12eb5201ce82a94cb343d50c898ebbd59b41a884",
+    "push_created": "false",
+    "comparison": "none; manual forcing",
+    "changed_paths": [
+      "docs/ci-01-acceptance-probe.md"
+    ],
+    "docs_only": "false",
+    "conclusion": "success",
+    "artifacts": [
+      "p34-compatibility-reports",
+      "p34-coverage-reports",
+      "cloudflare-powershell-p34-candidate"
+    ],
+    "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223",
+    "pr": 10,
+    "jobs": {
+      "Classify changes": {
+        "id": 111245001285,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245001285"
+      },
+      "Build": {
+        "id": 111245050144,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245050144"
+      },
+      "Deterministic generation": {
+        "id": 111245282040,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245282040"
+      },
+      "Unit and runtime smoke": {
+        "id": 111245282058,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245282058"
+      },
+      "P1-P2.4 regression": {
+        "id": 111245282081,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245282081"
+      },
+      "Compatibility gate": {
+        "id": 111245667800,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245667800"
+      },
+      "Coverage gate": {
+        "id": 111245282056,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245282056"
+      },
+      "Release and security preflight": {
+        "id": 111245282001,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111245282001"
+      },
+      "Package candidate and smoke": {
+        "id": 111246428555,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111246428555"
+      },
+      "CI status": {
+        "id": 111246720599,
+        "conclusion": "success",
+        "url": "https://github.com/Spring2022abcjk/Cloudflare-Pwsh/actions/runs/37137533223/job/111246720599"
+      }
+    }
+  }
+]
