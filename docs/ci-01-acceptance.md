@@ -13,8 +13,10 @@ The acceptance branch is `codex-petal/ci-acceptance`, in the separate
 `E:\桌面\edit\cloudflare-pwsh-ci-acceptance` worktree. The user explicitly
 authorized both remote probe acceptance and main protection
 after reviewing the prepared scope. Both authorized operations are complete.
-Acceptance documentation itself remains local; no acceptance-branch push or merge
-is included in this authorization.
+The two original authorizations excluded acceptance-branch publication. On
+2026-10-04 (Asia/Taipei), the user separately authorized pushing the documentation
+branch codex-petal/ci-acceptance. Creating or merging an acceptance PR is not
+included in that push authorization.
 
 The current executable blobs are:
 
@@ -91,7 +93,7 @@ Each test PR was created draft, temporarily marked ready after all runs and conf
 - No required CI-01 scenario remains missing for baseline `776d26111eacea2708152a084d4124e3bc8f82da`. Revalidate the affected remote matrix after future executable workflow/classifier/status changes; old successes do not establish a new revision.
 - Remote cancellation was not injected; its evaluator cases passed locally. Merge queues are not configured or accepted by this matrix. Neither is counted as a completed remote scenario.
 - No test PR was merged. Main content stayed unchanged. No Cloudflare account call, secret use by a workflow, Gallery publication, or real-resource mutation was performed. Candidate uploads are inspection artifacts with the existing 14-day retention, not release approval. Raw logs and snapshots remain in the external evidence directory.
-- The acceptance documentation and configuration evidence are local commits on `codex-petal/ci-acceptance`; pushing or merging that documentation branch was not part of the two authorized operations. Applied GitHub main protection persists after probe cleanup; removing it requires separate authorization.
+- The acceptance documentation and configuration evidence are commits on `codex-petal/ci-acceptance`. Pushing this documentation branch was separately authorized on 2026-10-04 (Asia/Taipei); the branch remains unmerged. Applied GitHub main protection persists after probe cleanup; removing it requires separate authorization.
 
 ## Initial acceptance gaps (before authorized remote execution)
 

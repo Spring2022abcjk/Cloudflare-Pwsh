@@ -119,7 +119,7 @@ rejection, and main now requires the stable `CI status` check. Normal ready
 test PRs were CLEAN and fault PRs BLOCKED before unmerged cleanup. See the
 [acceptance ledger](./ci-01-acceptance.md), [CI trigger policy](./ci-trigger-policy.md),
 [CI engineering guide](./ci-engineering.md), and [next-phase task register](./next-phase-task-register.md).
-Acceptance documentation remains local; release and future CI edits keep their own gates.
+Acceptance documentation branch publication was separately authorized; it remains unmerged. Release and future CI edits keep their own gates.
 
 #### P3.4 integration closure
 

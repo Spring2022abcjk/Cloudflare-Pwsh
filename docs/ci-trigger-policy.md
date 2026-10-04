@@ -9,7 +9,7 @@ exact-SHA runs and applied main protection requiring GitHub Actions `CI status`
 only. Four normal ready test PRs were CLEAN; two fault PRs were BLOCKED.
 See [the acceptance ledger](./ci-01-acceptance.md), [exact remote runs](./ci-01-remote-runs.md),
 and [protection readback](./ci-01-protection-evidence.json). Test PRs and remote
-probe refs were cleaned up without merging. Acceptance documentation is local;
+probe refs were cleaned up without merging. Acceptance documentation branch publication was separately authorized;
 CI acceptance does not authorize release or future protection changes.
 
 `.github/workflows/p34-ci.yml` starts on every `push`,

@@ -141,7 +141,7 @@ remain empty. Empty ruleset APIs do not mean main is unprotected.
 
 All six test PRs were closed unmerged and their remote probe refs deleted.
 Local probe commits/worktrees and external logs remain for audit. The acceptance
-documentation is committed locally on codex-petal/ci-acceptance and was not
-pushed under the probe/configuration authorization. Future executable CI edits
+documentation branch codex-petal/ci-acceptance received separate push authorization
+on 2026-10-04 (Asia/Taipei); it remains unmerged. Future executable CI edits
 need new exact-SHA evidence. Remote cancellation and merge queues were not
 accepted by this matrix; Gallery and real-account release gates are separate.
